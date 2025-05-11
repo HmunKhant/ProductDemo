@@ -1,0 +1,31 @@
+﻿@model ProductDemo.Web.Models.AdminUser
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Product App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/lux/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex align-items-center justify-content-center vh-100 bg-light">
+    <div class="card shadow p-4" style="min-width: 350px;">
+        <h4 class="text-center mb-4">Login</h4>
+        <form method="post">
+            <div class="mb-3">
+                <label>Username</label>
+                <input asp-for="Username" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label>Password</label>
+                <input asp-for="Password" type="password" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+            @if (ViewBag.Message != null)
+            {
+                <p class="text-danger text-center mt-2">@ViewBag.Message</p>
+            }
+        </form>
+    </div>
+</body>
+</html>

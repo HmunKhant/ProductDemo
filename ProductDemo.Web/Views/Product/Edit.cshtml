@@ -1,0 +1,24 @@
+﻿@model ProductDemo.Web.Models.Product
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<h2>Edit Product</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Price</label>
+        <input asp-for="Price" type="number" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Description</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a href="/Product/Index" class="btn btn-secondary">Cancel</a>
+</form>

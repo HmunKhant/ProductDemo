@@ -1,0 +1,23 @@
+﻿@model ProductDemo.Web.Models.Product
+@{
+    ViewData["Title"] = "Add Product";
+}
+
+<h2>Add New Product</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Price</label>
+        <input asp-for="Price" type="number" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Description</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+    <a href="/Product/Index" class="btn btn-secondary">Cancel</a>
+</form>
